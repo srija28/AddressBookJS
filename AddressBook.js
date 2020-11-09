@@ -128,11 +128,11 @@ function countContact(count) {
     count += 1;
     return count;
 }
-function searchContactByCity(city) {
+function searchContactByCity() {
     return addressBookArr.filter((contact) => contact.city == city);
   }
 
-function searchContactByState(state) {
+function searchContactByState() {
     return addressBookArr.filter((contact) => contact.state == state);
   }
 
