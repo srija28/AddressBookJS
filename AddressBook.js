@@ -128,6 +128,13 @@ function countContact(count) {
     count += 1;
     return count;
 }
+function searchContactByCity(city) {
+    return addressBookArr.filter((contact) => contact.city == city);
+  }
+
+function searchContactByState(state) {
+    return addressBookArr.filter((contact) => contact.state == state);
+  }
 
 let contact1 = new Contact("Shreya", "Reddy", "Miyapur", "Hyderabad", "Telangana", "500049", "91 9100887766", "shreyak@gmail.com");
  let contact2 = new Contact("Srija", "Reddy", "County", "Hyderabad", "Telangana", "500049", "91 9080706050", "srijak@gmail.com");
@@ -156,3 +163,11 @@ try{
     }catch(e){
         console.error(e);
 }
+
+try{
+    addressBookArr.push(contact2);
+}catch(e){
+    console.error(e);
+}
+
+console.log(searchContactByCity("Hyderabad"));
