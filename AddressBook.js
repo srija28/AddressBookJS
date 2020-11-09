@@ -71,10 +71,17 @@ class Contact {
         return "First Name : "+ this.firstName + ", Last Name : "+ this.lastName + ", Address : "+ this.address + 
         ", city : "+ this.city + ", State : "+ this.state +", Zip : "+ this.zip+ ", Phone No : "+ this.phoneNo + ", Email : "+ this.email;
     }
-}  
+} 
+
+let addressBookArr = new Array();
+ try{
+ addressBookArr.push(new Contact("Shreya", "Reddy", "Miyapur", "Hyderabad", "Telangana", "500049", "91 9100887766", "shreyak@gmail.com"));
+ }catch(e){
+     console.error(e);
+ }
 try{
-let contact = new Contact("Shreya", "Reddy", "Miyapur", "Hyderabad", "Telangana", "500049", "91 9100887766", "shreyak@gmail.com");
-console.log(contact.toString());
+    addressBookArr.push(new Contact("Srija", "Reddy", "County", "Hyderabad", "Telangana", "500049", "91 9080706050", "srijak@gmail.com"));
 }catch(e){
     console.error(e);
 }
+console.log(addressBookArr);
