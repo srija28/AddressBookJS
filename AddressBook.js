@@ -159,6 +159,26 @@ function countByState(){
     return countStateMap;
 }
 
+function sortContact(property){
+    switch(property){
+        case "city":
+            addressBookArr.sort((person1, person2) => (person1.city).localeCompare(person2.city));
+            return addressBookArr;
+            break;
+        case "state":
+            addressBookArr.sort((person1, person2) => (person1.state).localeCompare(person2.state));
+            return addressBookArr;
+            break;
+        case "zip":
+            addressBookArr.sort((person1, person2) => (person1.zip).localeCompare(person2.zip));
+            return addressBookArr;
+            break;
+        default:
+            console.log("Enter Valid Property");
+    }
+}
+
+
 let contact1 = new Contact("Shreya", "Reddy", "Miyapur", "Hyderabad", "Telangana", "500049", "91 9100887766", "shreyak@gmail.com");
  let contact2 = new Contact("Srija", "Reddy", "County", "Hyderabad", "Telangana", "500049", "91 9080706050", "srijak@gmail.com");
  try{
@@ -200,3 +220,6 @@ console.log(countByCity());
 
 addressBookArr.sort((person1, person2) => (person1.firstName).localeCompare(person2.firstName));
  console.log(addressBookArr); 
+
+ console.log(sortContact("state"));
+ console.log(sortContact("zip")); 
